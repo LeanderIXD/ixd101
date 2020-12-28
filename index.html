@@ -17,8 +17,10 @@
 </head>
 
 <body>
-
-    <nav>
+    <div class="background-colour">
+        <img class="portfolio-img" src="img/header.jpg" alt=" " class="manifesto" />
+    </div>
+    <nav id="navbar">
         <ul>
             <li class="logo"><a href="#">Leander Mutschler</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
@@ -26,51 +28,39 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <!--CHANGE THIS ON THE CSS TO APPLY A COLOUR TO MATCH YOUR OWN DESIGN-->
-    <div class="background-colour">
-        <header>
-            <!--- THIS IS WHERE YOUR MANIFESTO WILL GO -->
-            <h1>The path might not always be smooth, but it’s the bumps that make it fun.</h1>
-        </header>
 
-    </div>
+
 
     <section id="portfolio">
         <h2>Nine iterations</h2>
     </section>
-    <div>
-        <!--------------------PORTFOLIO THIS IS WHERE CSS GRID KICKS IN -------------------->
 
+    <div>
         <ul class="portfolio">
             <a href="#">
-                <!--THIS TURNS THE FIRST IMAGE INTO A LINK. THIS COULD BE USED TO LINK TO A CASE STUDY PAGE FOR A PROJECT -->
                 <li>
-                    <img class="portfolio-img" src="https://placekitten.com/500/500
-              " alt=" " />
-                    <!--<h1 class="portfolio-title">Image One</h1>-->
-                    <!--YOU CAN ADD A CAPTION HERE IF YOU WISH-->
+                    <img class="portfolio-img" src="img/it1.jpg" alt=" " />
                 </li>
             </a>
-            <li><img class="portfolio-img" src="https://placekitten.com/500/500" alt=" " /></li>
-            <li><img class="portfolio-img" src="https://placekitten.com/500/500" alt=" " /></li>
-            <li><img class="portfolio-img" src="https://placekitten.com/500/500" alt=" " /></li>
-            <li><img class="portfolio-img" src="https://placekitten.com/500/500" alt=" " /></li>
-            <li><img class="portfolio-img" src="https://placekitten.com/500/500" alt=" " /></li>
-            <li><img class="portfolio-img" src="https://placekitten.com/500/500" alt=" " /></li>
-            <li><img class="portfolio-img" src="https://placekitten.com/500/500" alt=" " /></li>
-            <li><img class="portfolio-img" src="https://placekitten.com/500/500" alt=" " /></li>
-            
+            <li><img class="portfolio-img" src="img/it2.jpg" alt=" " /></li>
+            <li><img class="portfolio-img" src="img/it3.jpg" alt=" " /></li>
+            <li><img class="portfolio-img" src="img/it4.jpg" alt=" " /></li>
+            <li><img class="portfolio-img" src="img/it5.jpg" alt=" " /></li>
+            <li><img class="portfolio-img" src="img/it6.jpg" alt=" " /></li>
+            <li><img class="portfolio-img" src="img/it7.jpg" alt=" " /></li>
+            <li><img class="portfolio-img" src="img/it8.jpg" alt=" " /></li>
+            <li><img class="portfolio-img" src="img/it9.jpg" alt=" " /></li>
         </ul>
     </div>
+
     <section class="follow">
         <h2>Follow the rhythm</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis pellentesque interdum. Aenean a est lacinia, mollis nisi sed, ultrices erat. Praesent pulvinar bibendum volutpat. Aliquam lacinia gravida orci, et cursus dolor dignissim nec. Morbi hendrerit nec dolor at pretium.</p>
         <p>Vivamus sed quam lectus. Ut blandit nisl vitae quam tincidunt, vitae facilisis sem gravida. Etiam dapibus vel purus sed lacinia. Mauris eget mi vestibulum, imperdiet velit mollis, consequat eros. Morbi porta turpis ut volutpat ornare.</p>
     </section>
-
-    <!--THE IMAGE BELOW CAN BE REPLACED WITH A NUMBER OF SMALLER IMAGES IF REQUIRED.-->
-    <img src="https://placekitten.com/2000/1000" alt="portfolio image" />
-
+    <div class="">
+        <img src="img/Follow%20the%20Rythm-4.2.jpg" alt="portfolio image" />
+    </div>
     <div class="background-colour" id="about">
         <section>
             <h2>About me</h2>
@@ -79,12 +69,9 @@
         </section>
     </div>
 
-    <!----------------- FOOTER ------------------>
     <footer id="contact">
         <ul class="connections">
-
-            <!------------- EMAIL ------------------>
-            <li><a href="mailto:#" title="send me an email">
+            <li><a href="mailto:m.leander@btinternet.com" title="send me an email">
                     <svg width="36" height="36" viewBox="0 0 36 36">
                         <g></g>
                         <path d="M17.902 1.699c-8.949 0-16.203 7.254-16.203 16.203s7.254 16.203 16.203 16.203c8.949 0 16.203-7.254 16.203-16.203 0-8.949-7.254-16.203-16.203-16.203zM9.168 11.487h17.371c0.99 0 1.794 0.699 1.878 1.588l-10.599 4.53-10.532-4.501c0.069-0.903 0.88-1.618 1.881-1.618zM28.434 23.494c0 0.961-0.848 1.739-1.895 1.739h-17.371c-1.047 0-1.895-0.778-1.895-1.739v-9.566l10.558 4.511 0.008-0.013 10.595-4.529v9.597z" fill="#fff" />
@@ -113,7 +100,25 @@
         </ul>
 
         <small>The contents of this website are ©2020 your name. Copyright and intellectual property of projects is owned by Xxxxx Xxxxxx</small>
+
     </footer>
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+    </script>
 </body>
 
 </html>

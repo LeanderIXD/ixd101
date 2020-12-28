@@ -4,7 +4,12 @@ body {
     font-style: normal;
 }
 
-section,header {
+html {
+    scroll-behavior: smooth;
+}
+
+section,
+header {
     width: 80%;
     max-width: 800px;
     margin: auto;
@@ -14,15 +19,18 @@ header {
     max-width: 900px;
     color: #fafafa;
 }
-header h1{
+
+header h1 {
     margin: 1em 0;
     font-size: 5.25;
     font-weight: bold;
     line-height: 1.2;
 }
-.background-colour{
-    background-color: #7b91b6;
-    padding: 4em 0;
+
+.background-colour img{
+    display: block;
+    margin:auto;
+    width: 100%;
 }
 
 /*---TYPOGRAPHY---*/
@@ -50,105 +58,81 @@ p {
     margin-bottom: 1em;
     font-weight: 200;
 }
+
 /*---LINKS---*/
-a{
-    color:#439ff6;
+a {
+    color: #439ff6;
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: #103254;
     border-bottom: 1px dotted;
 }
 
 /*---NAVIGATION---*/
-nav{
-    top:0;
-    left:0;
-    margin: 0%;
-    width:90%;
-    background color: #fff;
-    padding: 1em 0;
-    font-size: 0.85em;
+nav {
+   width: 100%;
+    margin: 0;
+
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.5em 0;
+    font-size: 1em;
 }
-nav ul{
+
+nav ul {
     padding-right: 15vw;
     text-align: right;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-nav ul li{
+
+nav ul li {
     display: inline;
     margin: 20px;
     background: none;
 }
-nav a:hover{
+
+nav a:hover {
     transition: all 0.3s ease-in-out;
     border-bottom: none;
     color: #103254
 }
-.logo{
-    font-size: 1.8em;
+
+.logo {
+    font-size: 2.25em;
     font-weight: bold;
     text-align: left;
     text-transform: none;
     padding-right: 30vw;
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
 
 /*---IMAGES---*/
-img{
+img {
     display: block;
     margin: auto;
     max-width: 100%;
 }
+.rythm img {
+    width: 700px;
+}
 
 /*---PORTFOLIO SCREEN*/
-.portfolio{
+.portfolio {
     max-width: 800px;
     margin: auto;
     padding: 40px 0;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
