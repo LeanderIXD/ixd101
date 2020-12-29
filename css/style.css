@@ -1,6 +1,15 @@
+/*---FONT---*/
+@font-face {
+    font-family: 'leander_handregular';
+    src: url('leanderhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
-    font-family:
-        color: #333;
+    font-family: 'Inter', sans-serif;
+    color: #333;
     font-style: normal;
 }
 
@@ -27,9 +36,9 @@ header h1 {
     line-height: 1.2;
 }
 
-.background-colour img{
+.background-colour img {
     display: block;
-    margin:auto;
+    margin: auto;
     width: 100%;
 }
 
@@ -49,14 +58,18 @@ h1 {
 h2 {
     font-size: 2.75em;
     margin: 1em 0;
-    color: #439ff6;
+    color: #050505;
 }
 
 p {
+    margin: 1em auto;
     font-size: 1.25em;
     line-height: 1.5;
     margin-bottom: 1em;
     font-weight: 200;
+    width: 80%;
+    max-width: 700px;
+
 }
 
 /*---LINKS---*/
@@ -72,11 +85,15 @@ a:hover {
 
 /*---NAVIGATION---*/
 nav {
-   width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
     margin: 0;
 
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 1.5em 0;
+    padding: .5em 0;
     font-size: 1em;
 }
 
@@ -106,16 +123,6 @@ nav a:hover {
     text-transform: none;
     padding-right: 30vw;
 }
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.sticky + .content {
-    padding-top: 60px;
-}
-
 
 /*---IMAGES---*/
 img {
@@ -123,6 +130,7 @@ img {
     margin: auto;
     max-width: 100%;
 }
+
 .rythm img {
     width: 700px;
 }
@@ -136,3 +144,163 @@ img {
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
+
+/*---Slides Iterartion---*/
+* {
+    box-sizing: border-box
+}
+
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/*---Rythm---*/
+.rythm {
+    background-image: url(../img/ryth.jpg);
+    background-size: contain;
+}
+
+.rythm h2 {
+    margin-bottom: 0;
+    color: white;
+}
+
+.rythm p {
+    margin top: 0;
+    margin-bottom: 0;
+    color: white;
+}
+
+.rythm {
+    padding-top: 10em;
+}
+
+.follow {
+    padding: 1em;
+}
+
+/*---SVG---*/
+.rythm p {
+    margin: auto;
+    margin-left: 0em;
+}
+
+.rythm a {
+    border-bottom: none;
+}
+
+.rythm a:hover svg path {
+    fill: black;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/*---FOOTER---*/
+
+
+footer {
+    text-align: center;
+    font-size: 60%;
+}
+footer p{
+    margin-top: 10em ;
+}
+
+.connections li {
+    margin: 0 15px;
+    display: inline-block;
+}
+
+.connections a:hover svg path {
+    fill: var(--orange);
+    transition: all 0.2s ease-in-out;
+}
+
+.connections a {
+    border-bottom: none;
+}
+
